@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySait3", "MySait3\MySait3.csproj", "{DBCCF2BF-0601-4476-8993-19A48A80909F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBCCF2BF-0601-4476-8993-19A48A80909F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCCF2BF-0601-4476-8993-19A48A80909F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCCF2BF-0601-4476-8993-19A48A80909F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCCF2BF-0601-4476-8993-19A48A80909F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75CBDAEA-E972-4D88-9EFE-5B5F54AEF5AC}
+	EndGlobalSection
+EndGlobal

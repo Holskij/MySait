@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MySait3.Models.Curse>
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Навчальні курси</h2>
+
+<p>
+    @Html.ActionLink("Створити новий", "CreateCurse")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            №
+        </th>
+        <th>
+            Назва курсу
+        </th>
+        <th>
+            Спеціальність
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.ProgramCurse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpusCurse)
+            </th>
+            <th></th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.ActionLink(item.NameCurse, "WorksCurse", new { id = item.Id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.ProgramCurse)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpusCurse)
+                </td>*@
+            <td>
+                @Html.ActionLink("Редагувати", "EditCurse", new { id = item.Id }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.Id }) |*@
+                @Html.ActionLink("Видалити", "DeleteCurse", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MySait3.Models.Work>
+
+@{
+    ViewBag.Title = "WorksCurse";
+}
+
+<h2>Матеріали курсу</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Autors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameWork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamePublishing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Page)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor()*@
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (ViewBag.Id == item.CurseId)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autors)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameWork)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamePublishing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Page)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.NameFile)*@
+                    @Html.ActionLink("Загрузити", "GetFile", new { item.NameFile })
+                </td>
+
+            </tr>
+        }
+    }
+
+</table></table>

@@ -1,0 +1,28 @@
+﻿@model MySait3.Models.ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+<h4>Використовуйте для входу іншу службу</h4>
+<hr />
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0) {
+        <div>
+            <p>
+                Зовнішні служби перевірки користувача не налаштовані. Подробиці про налаштування входу через зовнішні служби  цього додатка ASP.NET
+                див. в <a href="https://go.microsoft.com/fwlink/?LinkId=403804">цій статті</a>.
+            </p>
+        </div>
+    }
+    else {
+        using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                    @foreach (AuthenticationDescription p in loginProviders) {
+                        <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Війти за допомогою облікового запису @p.Caption">@p.AuthenticationType</button>
+                    }
+                </p>
+            </div>
+        }
+    }
+}

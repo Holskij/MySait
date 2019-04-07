@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Науково-методичні праці";
+}
+<h1>Науково-методичні праці</h1>
+<h2>@Html.ActionLink("Посібники", "GetList", new { typePublisher = "Posibnyk" })</h2>
+<h2>@Html.ActionLink("Програми курсів", "GetList", new { typePublisher = "Programm" })</h2>
+<h2>@Html.ActionLink("Описи дисциплін", "GetList", new { typePublisher = "Opys" })</h2>
+<h2>@Html.ActionLink("Презентації лекцій", "GetList", new { typePublisher = "Lection" })</h2>
+<h2>@Html.ActionLink("Наукові статті", "GetList", new { typePublisher = "Stattja" }) </h2>
+<h2>@Html.ActionLink("Тези конференцій", "GetList", new { typePublisher = "Tezy" })</h2>

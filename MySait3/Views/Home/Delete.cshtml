@@ -1,0 +1,38 @@
+﻿@model MySait3.Models.Work
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Видалення публікації</h2>
+<d1>
+    <dt>Автори</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Autors)
+    </dd>
+
+    <dt>Назва публікації</dt>
+    <dd>
+        @Html.DisplayFor(model => model.NameWork)
+    </dd>
+
+    <dt>Видавництво</dt>
+    <dd>
+        @Html.DisplayFor(model => model.NamePublishing)
+    </dd>
+
+    <dt>Рік видання</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Year)
+    </dd>
+
+    <dt>Кількість сторінок</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Page)
+    </dd>
+</d1>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Видалити" />
+}
